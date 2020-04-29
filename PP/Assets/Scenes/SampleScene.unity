@@ -422,13 +422,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.41489443, y: 0.5511475, z: -0.62894285, w: 0.35851082}
+  m_LocalRotation: {x: 0.66250825, y: 0.60830325, z: -0.4217024, w: 0.11496571}
   m_LocalPosition: {x: -5.7, y: 6.83, z: -2.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 82.20901, y: -429.173, z: -542.693}
+  m_LocalEulerAnglesHint: {x: 41.711002, y: -505.865, z: -611.773}
 --- !u!1 &750944031
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,6 +682,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4.0061
       objectReference: {fileID: 0}
+    - target: {fileID: 23812125741500328, guid: c4b192962deef094980528d2e80de419,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 54597406144772412, guid: c4b192962deef094980528d2e80de419,
         type: 3}
       propertyPath: m_UseGravity
@@ -695,17 +700,32 @@ PrefabInstance:
     - target: {fileID: 54597406144772412, guid: c4b192962deef094980528d2e80de419,
         type: 3}
       propertyPath: m_Drag
-      value: 0.5
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 54597406144772412, guid: c4b192962deef094980528d2e80de419,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 64242618889556900, guid: c4b192962deef094980528d2e80de419,
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 64242618889556900, guid: c4b192962deef094980528d2e80de419,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 64459768527213454, guid: c4b192962deef094980528d2e80de419,
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64459768527213454, guid: c4b192962deef094980528d2e80de419,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 64726294921843510, guid: c4b192962deef094980528d2e80de419,
         type: 3}
@@ -716,6 +736,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Convex
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64726294921843510, guid: c4b192962deef094980528d2e80de419,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4b192962deef094980528d2e80de419, type: 3}
@@ -820,7 +845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DecisionPeriod: 5
+  DecisionPeriod: 10
   TakeActionsBetweenDecisions: 1
   offsetStep: 0
 --- !u!114 &1203124197
@@ -853,12 +878,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    vectorObservationSize: 1
+    vectorObservationSize: 8
     numStackedVectorObservations: 1
-    vectorActionSize: 01000000
+    vectorActionSize: 02000000
     vectorActionDescriptions: []
-    vectorActionSpaceType: 0
-  m_Model: {fileID: 0}
+    vectorActionSpaceType: 1
+  m_Model: {fileID: 5022602860645237092, guid: f88cbb10a81f4b542b4506240be5fcb1, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: barabababa
